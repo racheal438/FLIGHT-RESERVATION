@@ -1,0 +1,22 @@
+{%extends "index_signup.html"%}
+{%block content%}
+	  
+	 
+	  
+<style>
+.main form{padding:50px;border:solid 1px green;margin 5px;width:600px;display:inline-block;color: green;background-color: lightgray;}
+
+.main label{width:90%;padding:5px;margin:5px;display:inline-block;text-align:center;font-weight:bolder;border:solid 1px lightgray}
+.main input{width:90%;padding:5px;margin:5px;display:inline-block;text-align:center;font-weight:bolder;border:solid 1px lightgray}
+
+</style>
+
+<div class= "main">
+<form method="POST">
+{% csrf_token %}
+{{form.as_table}}
+<input type="submit" value="submit form">
+
+</form>
+</div>
+{%endblock%}

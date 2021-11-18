@@ -1,0 +1,17 @@
+{%extends 'index_2.html' %}
+
+{%block content%}
+<style>
+.formsgroup{padding:25px;text-align:center;}
+
+.show{padding:11px;display:inline-block;width:80%;
+border:solid 1px lightblue;margin:20px;}
+</style>
+
+{%for route in routes%}
+<div class="show">{{route.airline}} &nbsp;  {{route.travelroute}}
+&nbsp;
+{{route.routefee}}
+</div>
+{%endfor%}
+{%endblock%}

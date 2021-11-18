@@ -1,0 +1,16 @@
+<style>
+ p{
+    color: green;
+	border: solid 50px;
+	 }
+</style>
+{% extends 'index.html'%}
+{%load static%}
+
+{%block content%}
+<b>User feedback</b>
+<p>
+{%for x in allfeedback%}
+<p>{{x.names}} &nbsp; {{x.email}}</p>
+{%endfor%}
+{%endblock%}

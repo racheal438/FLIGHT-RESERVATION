@@ -1,0 +1,18 @@
+{%extends 'index.html' %}
+<form method="POST">
+{%block content%}
+<style>
+.ago form{padding:10px;border:solid 1px green;margin 5px;width:300px;display:inline-block;}
+
+.ago label{width:50%;padding:5px;margin:5px;display:inline-block;text-align:center;font-weight:bolder;border:solid 1px lightgray}
+.ago input{width:50%;padding:5px;margin:5px;display:inline-block;text-align:center;font-weight:bolder;border:solid 1px lightgray}
+
+</style>
+<div class="ago">
+{% csrf_token%}
+{{form.as_p}}
+<input type="submit" value="login">
+
+</form>
+</div>
+{%endblock%}
